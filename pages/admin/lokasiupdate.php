@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
                     $_SESSION['hasil'] = false;
                     $_SESSION['pesan'] = "Gagal ubah data";
                 }
-                echo "<meta http=equiv='refresh' content='0;url=?page=lokasiread'>";
+                echo "<meta http-equiv='refresh' content='0;url=?page=lokasiread'>";
             }
         }
         ?>
@@ -85,10 +85,10 @@ if (isset($_GET['id'])) {
         </section>
 <?php
     } else {
-        echo "<meta http-equiv='refresh' content='0;url=?page=lokasiread>";
+        echo "<meta http-equiv='refresh' content='0;url=?page=lokasiread'>";
     }
 } else {
-    echo "<meta http-equiv='refresh' content='0;url=?page=lokasiread>";
+    echo "<meta http-equiv='refresh' content='0;url=?page=lokasiread'>";
 }
 ?>
 <?php include_once "partials/scripts.php" ?>
