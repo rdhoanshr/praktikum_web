@@ -21,11 +21,11 @@ if (isset($_POST['button_create'])) {
         // $insertTunjangan = "INSERT INTO jabatan SET tunjangan_jabatan = ?";
         // $insertUang = "INSERT INTO jabatan SET uang_makan_perhari = ?";
         $stmt = $db->prepare($insertNama);
-        $stmt = $db->prepare($insertGapok);
+        // $stmt = $db->prepare($insertGapok);
         // $stmt = $db->prepare($insertTunjangan);
         // $stmt = $db->prepare($insertUang);
         $stmt->bindParam(1, $_POST['nama_jabatan']);
-        $stmt->bindParam(2, $_POST['gapok_jabatan']);
+        // $stmt->bindParam(2, $_POST['gapok_jabatan']);
         // $stmt->bindParam(1, $_POST['tunjangan_jabatan']);
         // $stmt->bindParam(1, $_POST['uang_makan_perhari']);
         if ($stmt->execute()) {
