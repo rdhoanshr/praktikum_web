@@ -16,25 +16,20 @@ if (isset($_POST['button_create'])) {
         </div>
 <?php
     } else {
-        $insertNama = "INSERT INTO jabatan SET nama_jabatan = ?";
-        $insertGapok = "INSERT INTO jabatan SET gapok_jabatan = ?";
-        // $insertTunjangan = "INSERT INTO jabatan SET tunjangan_jabatan = ?";
-        // $insertUang = "INSERT INTO jabatan SET uang_makan_perhari = ?";
+
+        $insertNama = "INSERT INTO jabatan values(?,?,?,?,?)";
         $stmt = $db->prepare($insertNama);
-        // $stmt = $db->prepare($insertGapok);
-        // $stmt = $db->prepare($insertTunjangan);
-        // $stmt = $db->prepare($insertUang);
-        $stmt->bindParam(1, $_POST['nama_jabatan']);
-        // $stmt->bindParam(2, $_POST['gapok_jabatan']);
-        // $stmt->bindParam(1, $_POST['tunjangan_jabatan']);
-        // $stmt->bindParam(1, $_POST['uang_makan_perhari']);
+        $stmt->bindParam(1, $_POST[]);
+        $stmt->bindParam(2, $_POST['nama_jabatan']);
+        $stmt->bindParam(3, $_POST['gapok_jabatan']);
+        $stmt->bindParam(4, $_POST['tunjangan_jabatan']);
+        $stmt->bindParam(5, $_POST['uang_makan_perhari']);
         if ($stmt->execute()) {
             $_SESSION['hasil'] = true;
             $_SESSION['pesan'] = "Berhasil simpan data";
         } else {
             $_SESSION['hasil'] = false;
             $_SESSION['pesan'] = "Gagal simpan data";
-            // echo "Simpan Gagal";
         }
         echo "<meta http-equiv='refresh' content='0;url=?page=jabatanread'>";
     }
