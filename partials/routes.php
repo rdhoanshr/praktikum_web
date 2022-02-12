@@ -26,6 +26,10 @@ if (isset($_GET['page'])) {
 			file_exists('pages/admin/jabatanread.php') ? include
 				'pages/admin/jabatanread.php' : include "pages/404.php";
 			break;
+		case 'jabatancreate':
+			file_exists('pages/admin/jabatancreate.php') ? include
+				'pages/admin/jabatancreate.php' : include "pages/404.php";
+			break;
 
 		default:
 			include "pages/404.php";
