@@ -189,3 +189,5 @@ if (isset($_GET['id'])) {
 } else {
     echo "<meta htttp-equic='refresh' content='o;url=?page=karyawanread'>";
 }
+?>
+<?php include_once "partials/scripts.php" ?>
